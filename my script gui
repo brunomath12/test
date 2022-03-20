@@ -1,0 +1,44 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Dizzy Private", "Midnight")
+local Main = Window:NewTab("Main")
+
+
+-- FUN
+
+
+local Fun = Window:NewTab("Fun")
+local FunSection = Fun:NewSection("Fun")
+FunSection:NewDropdown(" Prison Life Admin", "click for execute script", {"Prison Life Admin"}, function(v)
+    print(currentOption)
+ loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
+
+end)
+FunSection:NewDropdown("Infinite Yield", "click for execute script", {"Infinite Yield"}, function(v)
+    print(currentOption)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+FunSection:NewDropdown("Head Dancer", "click for execute script", {"Head Dancer"}, function(v)
+    print(currentOption)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/brunomath12/test/main/ae",true))()
+end)
+FunSection:NewDropdown("DemonFall", "click for execute script", {"Demonfall"}, function(v)
+    print(currentOption)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ghost-home/public/main/demonfall.lua",true))()
+end)
+
+
+
+
+-- MAIN
+
+
+local MainSection = Main:NewSection("Main")
+MainSection:NewSlider("WalkSpeed", "changes the walkspeed :)", 250, 0, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+end)
+MainSection:NewSlider("Jumppower", "changes the jumppower :)", 250,50, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.Jumppower = v
+end)
+
+
+
